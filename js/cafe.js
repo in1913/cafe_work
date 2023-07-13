@@ -97,6 +97,25 @@ $(function(){
     $('.smallbanner>a').click(function(e){
         e.preventDefault();
         const eq0 = $()
+    });
+
+
+    $(window).on('scroll', function(){
+        if($(window).scrollTop() > 2000){
+            $(".angletop").fadeIn();
+        }else{
+            $(".angletop").fadeOut();
+        };
+
+    });
+    $('.angletop').click(function(e){
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: '0'
+        } ,300);
+    });
+    $('.circle-btn-1').click(function(){
+        $('.rabbit').show();
     })
 }); // jquery
 
